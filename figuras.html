@@ -5,9 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Figuras Geométricas | Curso Práctico de JavaScript en Platzi</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <h1>Figuras Geométricas</h1>
+    <header>
+        <h1 class="title header__title">Figuras Geométricas</h1>
+    </header>
+    <main>
+        <h2 class="title main__title">Confiable y diseñado para su uso diario</h2>
+        <p class="text main__text">Este es el primer taller del Curso Práctico de JavaScript</p>
+        <section class="section-slider">
+            <div class="main__container square__container">
+                <span class="icon square__icon"></span>
+                <h3 class="title container__title square__title">Cuadrado</h3>
+                <form class="container__form square__form" action="">
+                    <label class="text form__text" for="inputLadoCuadrado">
+                        Ingresa la medida del lado de tu cuadrado: <br />
+                    </label>
+                    <input id="inputLadoCuadrado" type="number">
+                    <input type="button" value="Calcular Perímetro" onclick="calcularPerimetroCuadrado()">
+                    <input type="button" value="Calcular Área" onclick="calcularAreaCuadrado()">
+                </form>
+            </div>
+            <div class="main__container triangle__container">
+                <span class="icon triangle__icon"></span>
+                <h3 class="title container__title triangle__title">Triángulo</h3>
+                <form class="container__form triangle__form" action="">
+                    <!-- <label class="text form__text" for="inputLado1Triangulo">
+                        Ingresa la medida del primer lado de tu triángulo: <br />
+                    </label>
+                    <input id="inputLado1Triangulo" type="number">
+                    <label class="text form__text" for="inputLado2Triangulo">
+                        Ingresa la medida del segundo lado de tu triángulo: <br />
+                    </label>
+                    <input id="inputLado2Triangulo" type="number">
+                    <label class="text form__text" for="inputBaseTriangulo">
+                        Ingresa la medida de la base de tu triángulo: <br />
+                    </label>
+                    <input id="inputBaseTriangulo" type="number"> -->
+                    <label for="inputLado1Triangulo" class="text form__text">
+                        Ingresa la medida del primer lado de tu triángulo:
+                    </label>
+                    <input type="number" id="inputLado1Triangulo">
+                    <label for="inputLado2Triangulo" class="text form__text">
+                        Ingresa la medida del segundo lado de tu triangulo:
+                    </label>
+                    <input type="number" id="inputLado2Triangulo">
+                    <label for="inputBaseTriangulo" class="text form__text">
+                        Ingresa la medida de la base de tu triángulo:
+                    </label>
+                    <input type="number" id="inputBaseTriangulo">
+                    <input type="button" value="Calcular Perímetro" onclick="calcularPerimetroTriangulo()">
+                    <input type="button" value="Calcular Área" onclick="calcularAreaTriangulo()">
+                </form>
+            </div>
+            <div class="main__container circle__container">
+                <span class="icon circle__icon"></span>
+                <h3 class="title container__title circle__title">Círculo</h3>
+                <form class="container__form circle__form" action="">
+                    <label class="text form__text" for="inputRadioCirculo">
+                        Ingresa la medida del radio de tu círculo: <br />
+                    </label>
+                    <input id="inputRadioCirculo" type="number">
+                    <input type="button" value="Calcular Perímetro" onclick="calcularPerimetroCirculo()">
+                    <input type="button" value="Calcular Área" onclick="calcularAreaCirculo()">
+                </form>
+            </div>
+        </section>
+    </main>
     <script src="./figuras.js"></script>
 </body>
 </html>
