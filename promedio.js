@@ -64,7 +64,19 @@ lista1.map(
     }
 );
 
-const moda = 
+const listaArray = Object.entries(lista1Count);
+
+// .map(
+//     function(elemento) {
+//         let mayor = 0;
+//         if(mayor < elemento[1]){
+//             mayor = elemento[1];
+//         }
+//         return elemento.find(mayor);
+//     }
+// )
+
+
 
 function numerosIguales(list) {    
     
