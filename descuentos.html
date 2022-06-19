@@ -4,26 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Porcentajes y Descuentos | Curso Práctico de JavaScript en Platzi</title>
+    <title>Percentages and Discounts | JavaScript Practical Course by Platzi</title>
 </head>
 <body>
     <header>
-        <h1>Porcentajes y Descuentos</h1>
     </header>
     <main>
+        <h1>Percentages and Discounts: Challenge Discount Coupons</h1>
+        <p>This is the second workshop of the JavaScript Practical Course</p>
         <div>
             <h2>Calcular el precio a pagar de tus productos con descuento</h2>
+            <h2>Calculate the Price to Pay for a Discounted Product</h2>
             <form action="">
-                <label for="inputPrecio">
-                    Ingresa el precio de tu producto:
-                    <input type="number" id="inputPrecio">
+                <label for="inputPriceProduct">
+                    Price of the product:
+                    <input type="number" id="inputPriceProduct">
                 </label>
-                <label for="inputDscto">
-                    Ingresa el porcentaje de descuento de tu producto:
-                    <input type="number" id="inputDscto">
+                <label for="inputCouponProduct">
+                    Product coupon (if you have one):
+                    <input type="text" id="inputCouponProduct">
+                    <p id="inputError"></p>
                 </label>
-                <input type="button" value="Calcular precio con descuento" onclick="OnClickButtonPriceWithDiscount()">
-                <p id="resultPriceWithDiscount"></p>
+                <input type="button" value="Calcular precio con descuento" onclick="OnClickButtonDiscountedPrice()">
+                <p id="resultDiscountedPriceProduct"></p>
             </form>
         </div>
     </main>
