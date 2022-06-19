@@ -26,11 +26,12 @@ function esPar(cantidadElementos) {
         return false;
     }
 }
+function ordenar(a, b) {
+    return a - b;
+}
 
 function calcularMediana(lista) {
-    lista.sort(function(a,b){
-         return a - b; 
-        });
+    lista.sort(ordenar);
 
     const mitadLista = parseInt(lista.length / 2);
     let mediana = 0; 
@@ -45,4 +46,26 @@ function calcularMediana(lista) {
     }
 
     return mediana;
+}
+
+//MODA
+
+const lista1 = [14, 24, 9, 2, 5, 2, 6, 9 , 1, 2];
+
+const lista1Count = {};
+
+lista1.map( 
+    function(elemento) {
+        if(lista1Count[elemento]) {
+            lista1Count[elemento] += 1;
+        } else {
+            lista1Count[elemento] = 1; 
+        }
+    }
+);
+
+const moda = 
+
+function numerosIguales(list) {    
+    
 }
