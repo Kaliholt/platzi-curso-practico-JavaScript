@@ -1,3 +1,6 @@
+
+const answer = document.getElementById("inputAnswer");
+
 //PROMEDIO
 function calcularMediaAritmetica(lista) {
     // let sumaLista = 0;
@@ -14,6 +17,22 @@ function calcularMediaAritmetica(lista) {
     const promedioLista = sumaLista / lista.length;    
 
     return promedioLista;
+}
+
+function onClickButtonMean() {
+    const inputList = document.getElementById("inputLista");
+    const valueList = inputList.value;
+
+    const convertList = valueList.split(",").map(
+        function(item){
+            return parseInt(item);
+        }
+    );
+    console.log([convertList]);
+
+    const averageList = calcularMediaAritmetica(convertList);
+    
+    answer.innerText = "The average of the data is: " + averageList;
 }
 
 
@@ -50,34 +69,28 @@ function calcularMediana(lista) {
 
 //MODA
 
-const lista1 = [14, 24, 9, 2, 5, 2, 6, 9 , 1, 2];
-
-const lista1Count = {};
-
-lista1.map( 
-    function(elemento) {
-        if(lista1Count[elemento]) {
-            lista1Count[elemento] += 1;
-        } else {
-            lista1Count[elemento] = 1; 
-        }
-    }
-);
-
-const listaArray = Object.entries(lista1Count);
-
-// .map(
-//     function(elemento) {
-//         let mayor = 0;
-//         if(mayor < elemento[1]){
-//             mayor = elemento[1];
-//         }
-//         return elemento.find(mayor);
-//     }
-// )
-
-
-
-function numerosIguales(list) {    
-    
+function ordenarArray2D(itemA,itemB){
+    return itemA[1] - itemB[1];
 }
+
+function calcularModa(lista) {
+
+    const listaCount = {};
+
+    lista.map(
+        function(elemento){
+            if(listaCount[elemento]) {
+                listaCount[elemento] += 1;
+            } else {
+                listaCount[elemento] = 1;
+            }
+        }
+    );
+
+    const listaArray = Object.entries(listaCount).sort(ordenarArray2D);
+
+    const moda = listaArray[listaArray.length - 1];
+
+    return moda;
+}
+console.log("Hola a todos!!");
