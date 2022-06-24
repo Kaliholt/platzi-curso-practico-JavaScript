@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Analysis</title>
+    <link rel="stylesheet" href="../CSS/salarios.css">
+</head>
+<body>
+    <main>
+        <section class="section-main">
+            <form action="">
+                <label for="inputName">
+                    Ingrese su nombre: 
+                    <br>
+                    <input type="text" id="inputName"> 
+                    <br>
+                </label>
+                <label for="inputSalario">
+                    Ingrese su salario: 
+                    <br>
+                    <input type="number" id="inputSalario">
+                    <br>
+                </label>
+                <input type="button" value="Agregar a la lista">
+                <input type="button" value="Promedio Salarios" onclick="onClickMedianaSalarios()">
+                <input type="button" value="Promedio Salarios Top 10%">
+                <p id="result"></p>
+            </form>
+            <script src="../JS/salariosEjemplos.js"></script>
+            <script src="../JS/salarios.js"></script>
+            <section class="section-main__aside">
+                <p id="lista"></p>
+            </section>
+        </section>
+    </main>
+</body>
+</html>

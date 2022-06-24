@@ -1,4 +1,7 @@
 //HELPERS
+const inputResult = document.getElementById("result");
+const inputLista = document.getElementById("lista");
+
 const salariosCol = colombia.map(
     function(persona) {
         return persona.salary;
@@ -30,7 +33,11 @@ function calcularMedianaSalarios(lista) {
 
     return mediana;
 } 
+
 const medianaGeneralCol = calcularMedianaSalarios(salariosColSorted);
+function onClickMedianaSalarios() {
+    inputResult.innerText = "La mediana general de salario es comobia es  pesos colombianos";
+}
 
 //MEDIANA DEL TOP 10 DE SALARIOS
 
